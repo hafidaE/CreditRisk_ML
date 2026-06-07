@@ -1,2 +1,2 @@
 # CreditRisk_ML
-Application Streamlit de prédiction du niveau de risque de défaut
+Application Streamlit de prédiction du niveau de risque de défaut d'un crédit bancaire
