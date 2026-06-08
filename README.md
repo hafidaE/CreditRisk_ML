@@ -13,3 +13,7 @@ Le lien de l'application déployée sur Streamlit Cloud :
 https://creditriskml-alcb2luy4fyqt9pxl9vvdv.streamlit.app/
 
 <img width="1378" height="918" alt="image" src="https://github.com/user-attachments/assets/77fab3ea-cc37-43e4-8030-5e5c0f76daaa" />
+
+Le lien de l'application sur Render : https://creditrisk-ml.onrender.com
+
+<img width="811" height="950" alt="Capture d’écran 2026-06-08 114308" src="https://github.com/user-attachments/assets/d4c3084c-cee5-455a-81b0-5d62f11a2684" />
