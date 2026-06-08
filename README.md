@@ -8,6 +8,7 @@ Application Streamlit de prédiction du niveau de risque de défaut d'un crédit
 * LTV : Loan to amount value
 
 Le modèle utilisé est XGBoost avec les paramètres suivants : {'learning_rate': 0.1, 'max_depth': 5, 'n_estimators': 100, 'scale_pos_weight': 1}
+
 La prédiction retourne la probabilité de défaut d'un crédit si elle est >= 25% => Crédit refusé (Le seuil décisionnel est 0.25 ) 
 
 Le lien de l'application déployée sur Streamlit Cloud : 
