@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 import pandas as pd
 import numpy as np
 import joblib
+import sys
 
 app = Flask(__name__)
 
@@ -11,6 +12,9 @@ def imputer_ltv(X):
     ltv_theorique = (X_copy['loan_amount'] / X_copy['property_value']) * 100
     X_copy['LTV'] = X_copy['LTV'].fillna(ltv_theorique)
     return X_copy
+
+import __main__
+__main__.imputer_ltv = imputer_ltv
 
 # 2. Chargement du modèle au démarrage
 pipeline = joblib.load("pipeline_credit_xgboost.joblib")
