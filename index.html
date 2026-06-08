@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>IA Score de Crédit</title>
+</head>
+<body>
+    <h1>🏦 Système d'Évaluation du Risque de Crédit</h1>
+    
+    <form method="POST">
+        <label>Revenu Mensuel (€) :</label> <input type="number" name="income" value="3500" required><br><br>
+        <label>Valeur du Bien (€) :</label> <input type="number" name="property_value" value="200000" required><br><br>
+        <label>Taux d'endettement (%) :</label> <input type="number" step="0.1" name="dtir1" value="33" required><br><br>
+        <label>LTV (% - optionnel) :</label> <input type="number" step="0.1" name="ltv" placeholder="Laisser vide"><br><br>
+        <label>Montant du Prêt (€) :</label> <input type="number" name="loan_amount" value="150000" required><br><br>
+        <label>Score de Crédit :</label> <input type="number" name="credit_score" value="650" required><br><br>
+        
+        <button type="submit">Lancer la prédiction</button>
+    </form>
+
+    <hr>
+
+    {% if donnees %}
+        <h3>🔍 Données saisies :</h3>
+        <ul>
+            {% for cle, valeur in donnees.items() %}
+                <li><strong>{{ cle }} :</strong> {{ valeur }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    {% if prediction %}
+        <h3>🎯 Résultat de l'IA :</h3>
+        <p><strong>Niveau de confiance (Probabilité de défaut) :</strong> {{ probabilite }}</p>
+        <p><strong>Décision :</strong> {{ prediction }}</p>
+    {% endif %}
+</body>
+</html>
